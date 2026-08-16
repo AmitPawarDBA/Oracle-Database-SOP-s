@@ -1,0 +1,20 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Never commit real credentials, dumps, or backups accidentally staged here
+*.dmp
+*.bak
+*.pfile
+*wallet*
+*.p12
+*.pem
+!docs/**/*.pem.example
+
+# Python cache from the screenshot generator
+__pycache__/
+*.pyc
