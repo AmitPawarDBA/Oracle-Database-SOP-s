@@ -373,8 +373,9 @@ string, and current apply-lag SLA.
 - MOS Doc ID 2064281.1 — Data Guard Physical Standby setup best practices
 - MOS Doc ID 470224.1 — Data Guard 11g/12c+ FAQ
 - Oracle Data Guard Concepts and Administration Guide (version-specific)
-- Internal: `06-data-guard-dr/switchover/01-planned-switchover.md`
-- Internal: `06-data-guard-dr/failover/01-emergency-failover.md`
+- Internal: `06-data-guard-dr/switchover/01-planned-switchover-dgmgrl.md` and `02-planned-switchover-manual-sql.md`
+- Internal: `06-data-guard-dr/failover/01-emergency-failover-dgmgrl.md` and `02-emergency-failover-manual-sql.md`
+- Internal: `06-data-guard-dr/troubleshooting/01-dg-lag-troubleshooting.md`
 - Internal: `07-backup-recovery/`
 
 ## 11. Change Log

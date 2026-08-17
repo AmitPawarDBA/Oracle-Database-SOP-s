@@ -33,27 +33,37 @@ a rollback plan.
 02-patching/                Quarterly RU/PSU patching (single-instance, RAC)
 03-upgrades/                Major version upgrades (AutoUpgrade, manual)
 04-migration/                Data Pump, RMAN duplicate, cross-platform migration
-05-high-availability-rac/   RAC cluster administration (stub — see its README)
+05-high-availability-rac/   RAC node lifecycle, OCR/voting disk, cluvfy, OSWatcher, SCAN/VIP
 06-data-guard-dr/
   setup/                    Physical standby configuration
-  switchover/               Planned switchover
-  failover/                 Emergency/unplanned failover
-07-backup-recovery/         RMAN backup strategy, restore & recovery
-08-performance-tuning/      AWR/ASH-based performance diagnosis
+  switchover/               Planned switchover — DGMGRL and manual SQL variants
+  failover/                 Emergency/unplanned failover — DGMGRL and manual SQL variants
+  troubleshooting/          Data Guard transport/apply lag diagnosis
+07-backup-recovery/         RMAN backup strategy; restore/recovery for every scenario
+                             (spfile, controlfile, datafile, block, full, PITR,
+                             tablespace, TSPITR via auxiliary instance)
+08-performance-tuning/      AWR/ASH-based performance diagnosis + how-to-read-AWR guide
 09-security-hardening/      Security hardening checklist
-10-monitoring-alerting/     Monitoring & alerting setup (stub)
-11-troubleshooting/         Common incident troubleshooting (stub)
+10-monitoring-alerting/     Monitoring & alerting setup (stub — see its README)
+11-troubleshooting/         Locks, deadlocks, flashback, FRA full, listener, ASH, ORA-01555, redo log
 12-daily-operations/        Daily health check / shift handover runbook
-13-cloud-exadata-oci/       Exadata / OCI specific procedures (stub)
+13-cloud-exadata-oci/       Exadata / OCI specific procedures (stub — see its README)
 checklists/                 Standalone checklists (go-live, DR drill, ...)
 scripts/                    Reusable SQL/shell helper scripts referenced by SOPs
 assets/screenshots/         Inline screenshots used across the SOPs
 docs/templates/             SOP and checklist templates for new documents
 ```
 
-Folders marked "stub" in the table above contain a `README.md` with a
-suggested list of SOPs to write next, following the same template and
-naming convention as the completed categories.
+Folders marked "stub" above contain a `README.md` with a suggested list of
+SOPs to write next, following the same template and naming convention as
+the completed categories. Every other category is fully populated.
+
+Where a DR activity (switchover, failover) can be done two ways, this
+repo documents both **as separate documents**: one driven by Data Guard
+Broker/DGMGRL (the recommended default), one using manual SQL*Plus
+commands (for when the Broker is unavailable or its metadata is
+corrupted). Don't mix the two mid-procedure — pick one path and follow it
+end to end.
 
 ## How to use this repo
 
@@ -93,12 +103,21 @@ naming convention as the completed categories.
 
 ## Status of this repository
 
-This repo was scaffolded with a complete category structure and a first
-batch of production-quality SOPs covering the core Oracle DBA lifecycle
-(installation, patching, upgrade, migration, DR setup/switchover/
-failover, backup/recovery, performance, security, daily health checks).
-Categories marked "stub" above are ready for content — see each folder's
-`README.md` for a starter list of topics.
+54 SOPs/checklists across 12 categories, covering the full Oracle DBA
+lifecycle: installation, patching (single-instance + RAC), upgrades,
+migration, RAC cluster administration, Data Guard/DR (setup, switchover,
+failover — each with DGMGRL and manual-SQL variants — and lag
+troubleshooting), backup & recovery (every restore/recovery scenario:
+spfile, controlfile, datafile, block corruption, full, PITR, tablespace,
+TSPITR), performance tuning, security hardening, incident troubleshooting
+(8 common production issues), and daily operations. Command syntax in
+these SOPs has been checked against docs.oracle.com and oracle-base.com
+where a source is cited in each SOP's References section — always
+re-verify against the current documentation for your exact version before
+running anything in production.
+
+`10-monitoring-alerting/` and `13-cloud-exadata-oci/` remain stubs — see
+each folder's `README.md` for a starter list of topics to add next.
 
 ## References / further reading
 
