@@ -181,6 +181,9 @@ RECOVER DATABASE;
 ALTER DATABASE OPEN RESETLOGS;
 ```
 
+![RMAN RESTORE CONTROLFILE FROM AUTOBACKUP completing successfully](../assets/screenshots/07-recover-controlfile-restore-success.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 If the autobackup is not in the default location/format, or you need to
 bound the search:
 

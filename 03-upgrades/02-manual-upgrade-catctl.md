@@ -149,6 +149,10 @@ parameters, invalid objects.
    cd $ORACLE_HOME/rdbms/admin
    $ORACLE_HOME/perl/bin/perl catctl.pl -n 4 -l /u01/software/upgrade/logs -d $ORACLE_HOME/rdbms/admin catupgrd.sql
    ```
+
+   ![catctl.pl completing all upgrade phases with zero errors](../assets/screenshots/03-upgrade-catctl-completion.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
    Key flags:
    - `-n <N>` — degree of parallelism for the upgrade phases
    - `-l <dir>` — log directory (always specify explicitly; defaults to

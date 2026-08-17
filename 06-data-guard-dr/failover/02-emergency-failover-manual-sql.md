@@ -200,6 +200,9 @@ document the gap explicitly as part of the RPO figure in Section 0.2.
    -- Expect: PRIMARY / READ WRITE / ORCLPRD_DR
    ```
 
+   ![Manual SQL failover completing with RECOVER FINISH, OPEN, and role confirmed as PRIMARY](../../assets/screenshots/06-dg-failover-manual-sql-success.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ### 5.2 Post-Failover: Reinstate the Old Primary as New Standby
 
 5. Once the failed primary host/storage is recoverable, determine

@@ -76,6 +76,9 @@ path applies:
 crsctl query css votedisk
 ```
 
+![crsctl query css votedisk showing total loss of all voting disk copies](../assets/screenshots/05-rac-voting-disk-total-loss.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 Interpret the output:
 
 | Output | Meaning | Path |
@@ -218,6 +221,10 @@ documentation and community RAC references (see Section 10).
    Successful replacement of voting disk group with +VOTEDG.
    CRS-4266: Voting file(s) successfully replaced
    ```
+
+   ![crsctl replace votedisk completing successfully and voting disks confirmed online](../assets/screenshots/05-rac-voting-disk-replace-success.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
    Confirm:
    ```bash
    crsctl query css votedisk

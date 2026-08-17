@@ -62,6 +62,9 @@ proactive threshold alerting.
 - `ARCH` background process(es) reported stuck/unable to archive in the
   alert log (`ARC0: Error 19809 Creating archive log file...`).
 
+![Alert log excerpt showing ORA-19809/ORA-19815 FRA-full archiver-stuck errors](../assets/screenshots/11-fra-full-alert-log-excerpt.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ```sql
 -- Confirm the database is genuinely blocked on log switch / archiving,
 -- not ordinary lock contention
@@ -225,6 +228,9 @@ FROM v$flash_recovery_area_usage;
 SELECT process, status, sequence# FROM v$archive_processes
 WHERE status != 'STOPPED';
 ```
+
+![v$recovery_file_dest usage back to normal and ARCH processes active after remediation](../assets/screenshots/11-fra-recovery-file-dest-resolved.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
 
 - [ ] `pct_used` back under 80% (site standard threshold)
 - [ ] No new `ORA-19809`/`ORA-19815` entries in the alert log since

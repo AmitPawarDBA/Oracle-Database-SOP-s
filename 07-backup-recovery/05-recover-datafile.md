@@ -158,6 +158,9 @@ RESTORE DATAFILE 7;
 RECOVER DATAFILE 7;
 ```
 
+![RMAN restore and recover of a single datafile completing successfully](../assets/screenshots/07-recover-datafile-completion.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ```sql
 -- 3. Bring the datafile back online
 ALTER DATABASE DATAFILE 7 ONLINE;

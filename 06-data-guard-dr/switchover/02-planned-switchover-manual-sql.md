@@ -144,6 +144,10 @@ pair mid-transition.
    ```sql
    ALTER DATABASE SWITCHOVER TO ORCLPRD_DR;
    ```
+
+   ![ALTER DATABASE SWITCHOVER TO completing and roles confirmed on both databases](../../assets/screenshots/06-dg-switchover-manual-sql-success.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
    > **Point of no return:** once this command is accepted and begins
    > executing, the current primary starts final redo shipping and
    > begins converting to a standby role. Do not interrupt the session

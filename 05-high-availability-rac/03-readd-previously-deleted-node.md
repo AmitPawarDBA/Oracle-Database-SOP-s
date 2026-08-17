@@ -232,6 +232,9 @@ $GRID_HOME/OPatch/opatch lsinventory -detail | grep -i "Patch" > /tmp/racnode3_p
 diff /tmp/racnode3_patches.txt /tmp/racnode1_patches.txt   # prepared baseline
 ```
 
+![cluvfy stage -post nodeadd passing on rejoin, all three nodes active, and a clean patch-level diff](../assets/screenshots/05-rac-readd-node-cluvfy-post.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 - [ ] `cluvfy stage -post nodeadd` reports overall result `PASSED`
 - [ ] `olsnodes -s -t` lists all three nodes `Active`, no duplicates
 - [ ] New/rejoined instance `ORCL3` shows `OPEN`

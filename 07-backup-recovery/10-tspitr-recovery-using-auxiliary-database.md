@@ -185,6 +185,9 @@ executing Memory Script
 Finished recover at 16-AUG-2026 12:14:52
 ```
 
+![RMAN TSPITR via automated auxiliary instance completing successfully](../assets/screenshots/07-tspitr-auxiliary-completion.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 RMAN, under the hood: builds a temporary control file and auxiliary
 instance in `/u06/tspitr_aux`, restores `SYSTEM`, `SYSAUX`, `UNDO`, and
 the recovery-set tablespace(s) into it, recovers to the target time,

@@ -107,6 +107,9 @@ Logical read (blocks): 48,920.7
 Executes (SQL):          3,102.4
 ```
 
+![AWR report Summary and Load Profile worked example](../assets/screenshots/08-awr-load-profile-worked-example.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 **How to read it:** `DB CPU` (3.4 sec/sec) vs `DB Time` (8.1 sec/sec)
 tells you roughly 42% of DB Time is CPU, the remainder is waiting on
 something else (I/O, locks, etc.) — that split is your first clue for

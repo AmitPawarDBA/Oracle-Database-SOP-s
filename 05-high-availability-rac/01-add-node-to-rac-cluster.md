@@ -219,6 +219,9 @@ srvctl status listener -n racnode3
 lsnrctl status LISTENER_SCAN1
 ```
 
+![cluvfy stage -post nodeadd reporting a successful post-check, with all three nodes active](../assets/screenshots/05-rac-add-node-cluvfy-post.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 - [ ] `olsnodes -s -t` lists `racnode1`, `racnode2`, `racnode3` all `Active`
 - [ ] `cluvfy stage -post nodeadd` reports overall result `PASSED`
 - [ ] New instance `ORCL3` shows `OPEN` in `gv$instance`

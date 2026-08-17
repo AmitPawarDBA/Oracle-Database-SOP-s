@@ -78,6 +78,9 @@ ORDER BY l.group#, lf.member;
 -- "cannot open/identify/read/write member of log group" errors)
 ```
 
+![v$log group status and matching ORA-00312/ORA-00313 alert log entries identifying the affected group](../assets/screenshots/11-troubleshooting-redolog-v-log-status.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ```bash
 # Cross-check the alert log directly for the exact ORA- codes and
 # affected file path

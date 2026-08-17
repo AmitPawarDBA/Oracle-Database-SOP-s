@@ -147,6 +147,9 @@ current SQL statement for this session:
 UPDATE table_1 SET ... WHERE id = :b1
 ```
 
+![Alert log ORA-00060 entry and deadlock graph excerpt from the trace file](../assets/screenshots/11-troubleshooting-deadlock-trace.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 The two "current SQL statement" blocks (one per session, usually a page
 or two apart in the trace file) are the two statements that deadlocked
 each other.

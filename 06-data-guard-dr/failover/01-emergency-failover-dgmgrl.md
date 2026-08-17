@@ -153,6 +153,10 @@ SELECT * FROM v$archive_gap;
    ```
    DGMGRL> FAILOVER TO 'ORCLPRD_DR';
    ```
+
+   ![DGMGRL failover succeeding with new primary ORCLPRD_DR](../../assets/screenshots/06-dg-failover-dgmgrl-success.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
    > **Point of no return:** once failover begins, the Broker finishes
    > applying all available redo, opens the standby as the new primary
    > with `RESETLOGS`, and — if it can reach the old primary — attempts

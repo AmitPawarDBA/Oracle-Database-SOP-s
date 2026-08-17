@@ -174,6 +174,9 @@ media recovery complete, elapsed time: 00:01:47
 Finished recover at 16-AUG-2026 11:07:28
 ```
 
+![RMAN restore and recover of a single tablespace completing successfully](../assets/screenshots/07-recover-tablespace-completion.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 > **Point of no return:** as with any recovery, once `RECOVER
 > TABLESPACE` applies redo, the tablespace is committed to "current" —
 > there is no `UNTIL` clause here by design (this SOP recovers to now,

@@ -167,6 +167,10 @@ treat this as a hard gate, not a formality:
 ```bash
 crsctl check cluster -all
 ```
+
+![crsctl check cluster -all showing every node healthy after a node's restart](../assets/screenshots/05-rac-rolling-restart-cluster-check.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 Expected: every node reports healthy, including the one just restarted.
 
 ```bash

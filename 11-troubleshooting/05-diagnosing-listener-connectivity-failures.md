@@ -274,6 +274,9 @@ lsnrctl services LISTENER
 # Expect: target service/instance shown with status READY
 ```
 
+![tnsping OK and lsnrctl status showing the listener up with the target service registered](../assets/screenshots/11-troubleshooting-listener-tnsping.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ```sql
 -- From the application/client side, confirm an actual login succeeds
 sqlplus <user>/<password>@<net_service_name>

@@ -168,6 +168,9 @@ Finished recover at 16-AUG-2026 10:51:15
 ALTER DATABASE OPEN RESETLOGS;
 ```
 
+![RMAN PITR SET UNTIL SCN, recover, and resetlogs completing successfully](../assets/screenshots/07-pitr-resetlogs-completion.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 > **Point of no return:** `OPEN RESETLOGS` creates a new database
 > incarnation. Every transaction after the recovery target is
 > permanently discarded and cannot be recovered forward using

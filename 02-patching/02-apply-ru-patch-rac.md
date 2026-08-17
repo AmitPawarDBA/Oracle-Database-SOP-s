@@ -128,6 +128,10 @@ invocation in the patch README, as syntax varies slightly by RU.
      /u01/software/patches/${RU_PATCH_NUM}/${RU_PATCH_NUM} \
      -oh $GRID_HOME,$ORACLE_HOME
    ```
+
+   ![opatchauto rolling apply completing successfully on node 1](../assets/screenshots/02-patching-rac-opatchauto-summary.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
    OPatchAuto will:
    - Detect the node is part of a RAC cluster and default to rolling mode
    - Stop CRS-managed resources and CRS itself on this node only

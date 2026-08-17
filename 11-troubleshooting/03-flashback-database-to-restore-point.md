@@ -164,6 +164,9 @@ FLASHBACK DATABASE TO TIMESTAMP
   TO_TIMESTAMP('2026-08-16 08:55:00', 'YYYY-MM-DD HH24:MI:SS');
 ```
 
+![FLASHBACK DATABASE TO RESTORE POINT completing successfully followed by resetlogs](../assets/screenshots/11-troubleshooting-flashback-success.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 > **Point of no return:** the following step, `OPEN RESETLOGS`, commits
 > you to the flashback outcome. Before opening, verify the flashback
 > landed at the correct point (Section 6) — if it's wrong, you can

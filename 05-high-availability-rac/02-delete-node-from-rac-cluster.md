@@ -198,6 +198,9 @@ srvctl config vip -node racnode3
 # Expected: error / resource not found
 ```
 
+![cluvfy stage -post nodedel reporting a successful post-check, with racnode3 no longer a cluster member](../assets/screenshots/05-rac-delete-node-cluvfy-post.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 - [ ] `cluvfy stage -post nodedel` reports overall result `PASSED`
 - [ ] `olsnodes -s -t` no longer lists `racnode3`
 - [ ] Remaining instances (`ORCL1`, `ORCL2`) are `OPEN` and unaffected

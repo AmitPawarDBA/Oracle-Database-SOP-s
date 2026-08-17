@@ -203,6 +203,9 @@ FROM v$database_block_corruption;
 SELECT COUNT(*) FROM v$database_block_corruption;
 ```
 
+![v$database_block_corruption returning zero rows after Block Media Recovery](../assets/screenshots/07-block-corruption-validation.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ```rman
 -- Re-validate to confirm the fix and catch anything still outstanding
 BACKUP VALIDATE CHECK LOGICAL DATAFILE 7;

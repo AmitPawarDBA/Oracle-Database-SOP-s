@@ -146,6 +146,9 @@ media recovery complete, elapsed time: 00:18:47
 database opened
 ```
 
+![RMAN full database restore, recover, and open completing successfully](../assets/screenshots/07-full-restore-recovery-completion.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 > **Point of no return:** once `RECOVER DATABASE` starts applying
 > archivelogs, the target is committed to "latest." If a different
 > target turns out to be needed, re-restore and re-run with `SET UNTIL`

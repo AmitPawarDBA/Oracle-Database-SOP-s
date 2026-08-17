@@ -141,6 +141,9 @@ ORDER BY samples DESC
 FETCH FIRST 15 ROWS ONLY;
 ```
 
+![Top SQL_ID by ASH sample count during the spike window, with top wait event/class breakdown](../assets/screenshots/11-troubleshooting-ash-top-sql.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 Interpretation:
 - `session_state = 'ON CPU'` (event is NULL) dominating → confirms
   CPU-bound; move to identifying the SQL/PL-SQL driving it.

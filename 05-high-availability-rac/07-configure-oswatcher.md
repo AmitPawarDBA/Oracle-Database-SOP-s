@@ -130,6 +130,9 @@ All steps run as the `oracle` OS user on **each** cluster node
    `oswiostat`, `oswmeminfo`, `oswnetstat`, `oswprvtnet`, `oswtop`, `oswps`,
    etc.).
 
+   ![startOSWbb.sh startup confirmation with collector processes running](../assets/screenshots/05-rac-oswatcher-startup-confirmed.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 7. **Add OSW startup to node boot** so it survives reboots/patching
    (crontab example — adjust for your site's job scheduler standard):
    ```bash

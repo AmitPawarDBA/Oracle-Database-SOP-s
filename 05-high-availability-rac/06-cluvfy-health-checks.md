@@ -110,6 +110,9 @@ $GRID_HOME/bin/cluvfy stage -post crsinst -n racnode1,racnode2,racnode3 \
   -verbose -html -savedir /u01/app/grid/cvu_reports
 ```
 
+![cluvfy stage -post crsinst reporting an overall PASSED verification result](../assets/screenshots/05-rac-cluvfy-post-crsinst-passed.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ### 5.4 Running Node-Add / Node-Delete Stage Checks
 
 Used by `01-add-node-to-rac-cluster.md` and the corresponding delete-node

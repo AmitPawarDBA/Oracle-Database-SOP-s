@@ -98,6 +98,9 @@ WHERE blocker.lmode > 0
 ORDER BY waiter_sess.seconds_in_wait DESC;
 ```
 
+![v$lock blocker/waiter join showing an active blocking chain](../assets/screenshots/11-troubleshooting-blocking-locks-query.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 ### 5.2 Identify the blocker/waiter chain — `dba_blockers` / `dba_waiters`
 
 Simpler, view-based alternative (same underlying data, joined by Oracle):

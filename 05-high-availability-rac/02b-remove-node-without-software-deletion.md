@@ -161,6 +161,9 @@ ls -ld /u01/app/19.0.0/grid /u01/app/oracle/product/19.0.0/dbhome_1
 $GRID_HOME/OPatch/opatch lsinventory -detail | head -20
 ```
 
+![olsnodes -s -t and crsctl check cluster -all confirming racnode3 is out of active membership while remaining nodes stay healthy](../assets/screenshots/05-rac-remove-node-olsnodes-status.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 - [ ] `racnode3` no longer appears in `olsnodes -s -t`
 - [ ] Remaining instances (`ORCL1`, `ORCL2`) are `OPEN` and unaffected
 - [ ] `$GRID_HOME` and `$ORACLE_HOME` directories and OPatch inventory on

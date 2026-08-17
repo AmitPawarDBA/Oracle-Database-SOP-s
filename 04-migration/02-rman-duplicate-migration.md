@@ -197,6 +197,10 @@ status once started in Section 5.
        PARALLELISM 4;
    }
    ```
+
+   ![RMAN active database duplication completing with Finished Duplicate Db](../assets/screenshots/04-migration-rman-duplicate-finished.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
    Key tuning points:
    - `ALLOCATE CHANNEL` (multiple) on the auxiliary side, combined with
      `PARALLELISM 4`, lets RMAN stream multiple datafiles concurrently

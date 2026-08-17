@@ -155,6 +155,9 @@ FETCH FIRST 20 ROWS ONLY;
 SHOW PARAMETER undo_retention;
 ```
 
+![v$undostat showing tuned undo retention and a nonzero ssolderrcnt confirming undo pressure](../assets/screenshots/11-troubleshooting-undostat.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 If `ssolderrcnt` or `nospaceerrcnt` is nonzero for the incident
 window, undo pressure is confirmed as (at least) a contributing
 factor.

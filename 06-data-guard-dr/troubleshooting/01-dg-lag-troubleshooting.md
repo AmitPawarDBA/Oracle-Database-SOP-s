@@ -67,6 +67,9 @@ WHERE name IN ('transport lag','apply lag','apply finish time',
                 'estimated startup time');
 ```
 
+![v$dataguard_stats output showing transport lag and apply lag values](../../assets/screenshots/06-dg-lag-troubleshooting-stats.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 - **Transport lag** (`transport lag`) — redo generated on the primary
   that has **not yet arrived** at the standby. Points to a network,
   primary-side ARCH/LGWR, or `log_archive_dest_n` transport problem.

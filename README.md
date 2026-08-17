@@ -47,16 +47,17 @@ a rollback plan.
 10-monitoring-alerting/     Monitoring & alerting setup (stub — see its README)
 11-troubleshooting/         Locks, deadlocks, flashback, FRA full, listener, ASH, ORA-01555, redo log
 12-daily-operations/        Daily health check / shift handover runbook
-13-cloud-exadata-oci/       Exadata / OCI specific procedures (stub — see its README)
+13-cloud-exadata-oci/       Exadata cell/image patching, IORM, OCI Autonomous DB, DBCS,
+                             cross-region OCI Data Guard, Object Storage RMAN backups
 checklists/                 Standalone checklists (go-live, DR drill, ...)
 scripts/                    Reusable SQL/shell helper scripts referenced by SOPs
 assets/screenshots/         Inline screenshots used across the SOPs
 docs/templates/             SOP and checklist templates for new documents
 ```
 
-Folders marked "stub" above contain a `README.md` with a suggested list of
-SOPs to write next, following the same template and naming convention as
-the completed categories. Every other category is fully populated.
+`10-monitoring-alerting/` is the one remaining stub — it has a `README.md`
+with a suggested list of SOPs to write next, following the same template
+and naming convention as every other (now fully populated) category.
 
 Where a DR activity (switchover, failover) can be done two ways, this
 repo documents both **as separate documents**: one driven by Data Guard
@@ -103,21 +104,24 @@ end to end.
 
 ## Status of this repository
 
-54 SOPs/checklists across 12 categories, covering the full Oracle DBA
+61 SOPs/checklists across 13 categories, covering the full Oracle DBA
 lifecycle: installation, patching (single-instance + RAC), upgrades,
 migration, RAC cluster administration, Data Guard/DR (setup, switchover,
 failover — each with DGMGRL and manual-SQL variants — and lag
 troubleshooting), backup & recovery (every restore/recovery scenario:
 spfile, controlfile, datafile, block corruption, full, PITR, tablespace,
 TSPITR), performance tuning, security hardening, incident troubleshooting
-(8 common production issues), and daily operations. Command syntax in
-these SOPs has been checked against docs.oracle.com and oracle-base.com
-where a source is cited in each SOP's References section — always
-re-verify against the current documentation for your exact version before
-running anything in production.
+(8 common production issues), daily operations, and Exadata/OCI (cell and
+image patching, IORM, Autonomous Database, DBCS, cross-region Data Guard,
+Object Storage backups). Command syntax in these SOPs has been checked
+against docs.oracle.com, oracle-base.com, and docs.oracle.com/en-us/iaas/
+(for OCI CLI) where a source is cited in each SOP's References section.
+Every SOP now has at least one inline screenshot at its key checkpoint —
+always re-verify against the current documentation for your exact version
+before running anything in production.
 
-`10-monitoring-alerting/` and `13-cloud-exadata-oci/` remain stubs — see
-each folder's `README.md` for a starter list of topics to add next.
+`10-monitoring-alerting/` is the one remaining stub — see its `README.md`
+for a starter list of topics to add next.
 
 ## References / further reading
 

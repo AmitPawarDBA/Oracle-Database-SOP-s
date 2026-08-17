@@ -103,6 +103,10 @@ troubleshooting if something goes wrong.
    ```
    Confirm the output now lists both `+DATA` and `+OCR_VOTE` as OCR
    locations, with matching device/consistency status.
+
+   ![ocrcheck confirming both +DATA and +OCR_VOTE pass integrity checks before the old location is deleted](../assets/screenshots/05-rac-relocate-ocr-ocrcheck.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 3. **Remove the old OCR location** once the new copy is confirmed healthy:
    ```bash
    ocrconfig -delete +DATA
@@ -123,6 +127,10 @@ groups in the target diskgroup based on its redundancy level.
    ```bash
    crsctl replace votedisk +OCR_VOTE
    ```
+
+   ![crsctl replace votedisk output confirming voting files added/removed, and crsctl query css votedisk showing the new location](../assets/screenshots/05-rac-relocate-votedisk-crsctl.png)
+   *Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 2. **Observe the command output directly** — it reports each voting file
    added/removed as part of the operation and will error immediately if the
    target diskgroup cannot support the required failure group count for the

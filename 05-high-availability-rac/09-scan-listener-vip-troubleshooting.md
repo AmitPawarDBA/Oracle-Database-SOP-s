@@ -75,6 +75,9 @@ srvctl status listener
 nslookup rac-scan.example.com
 ```
 
+![srvctl status scan_listener showing all 3 SCAN listeners running](../assets/screenshots/05-rac-scan-listener-status.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 Expected baseline: `srvctl status scan` shows 3 SCAN VIPs each running
 (distributed across nodes, not necessarily one per node in a 3-node
 cluster — Clusterware balances them), `srvctl status scan_listener` shows

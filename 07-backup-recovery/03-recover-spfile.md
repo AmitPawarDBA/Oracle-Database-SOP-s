@@ -153,6 +153,9 @@ RESTORE SPFILE FROM AUTOBACKUP;
 STARTUP FORCE;
 ```
 
+![RMAN RESTORE SPFILE FROM AUTOBACKUP completing and instance restarting successfully](../assets/screenshots/07-recover-spfile-restore-success.png)
+*Illustrative sample output — replace with your own environment capture (see `assets/screenshots/README.md`).*
+
 If the autobackup uses a non-default format or is not in the default FRA
 location, tell RMAN explicitly where to look before restoring:
 
